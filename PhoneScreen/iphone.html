@@ -5,7 +5,8 @@
     <title>Iphone</title>
     <style>
         body {
-            background: rgb(41, 39, 39);
+            background-image: url(photo-1595204865687-7ded6bbf6040.avif);
+            background-size: cover;
         }
         .iphone{
             position: relative;
@@ -17,7 +18,7 @@
             border-bottom-width: 85px;
             border-radius: 50px;
         }
-        .iphone .frame{
+       .frame{
             position: absolute;
             border: 4px rgb(185, 166, 61) solid;
             width: 390px;
@@ -25,122 +26,81 @@
             border-radius: 50px;
             left: -20px;
             top: -86px;
-        }
-        .iphone .sideButton{
+        } 
+        .button, .lockButton, .volumeButtonTop, .volumeButtonBottom, .muteButton{
             content: '';
             display: block;
             width: 4px;
             height: 50px;
             border: 1px black solid;
             position: absolute;
-            top: 125px;
-            left: 105.5%;
             transform: translate(-50%, -50%);
             background: wheat;
             border-radius: 10px;
         }
-        .iphone .volumeButton1{
-            content: '';
-            display: block;
-            width: 4px;
-            height: 50px;
-            border: 1px black solid;
-            position: absolute;
+        .button{
+           width: 50px;
+           left: 51%;
+           bottom: -93px;
+           background: white;
+           border: 3px solid rgb(68, 58, 2);
+           border-radius: 50%;
+        }
+        .lockButton{
+            top: 125px;
+            left: 105%;
+        }
+         .volumeButtonTop{           
             top: 90px;
             left: -5.5%;
-            transform: translate(-50%, -50%);
-            background: wheat;
-            border-radius: 10px;
         }
-        .iphone .volumeButton2{
-            content: '';
-            display: block;
-            width: 4px;
-            height: 50px;
-            border: 1px black solid;
-            position: absolute;
+         .volumeButtonBottom{
             top: 155px;
             left: -5.5%;
-            transform: translate(-50%, -50%);
-            background: wheat;
-            border-radius: 10px;
         }
-        .iphone .muteButton{
-            content: '';
-            display: block;
-            width: 4px;
+         .muteButton{
             height: 25px;
-            border: 1px black solid;
-            position: absolute;
             top: 20px;
             left: -5.5%;
-            transform: translate(-50%, -50%);
-            background: wheat;
-            border-radius: 10px;
         }
-
-        .iphone .speaker{
+        .speaker, .camera, .sensor{
             content: '';
             display: block;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            background: black;
+            border-radius: 10px;
+        }
+        .speaker{
             width: 50px;
             height: 5px;
-            position: absolute;
             top: -35px;
             left: 51%;
-            transform: translate(-50%, -50%);
-            background: black;
-            border-radius: 10px;
         }
-        .iphone .camera{
-            content: '';
-            display: block;
+        .camera{
             width: 10px;
             height: 10px;
-            position: absolute;
             top: -35px;
             left: 37%;
-            transform: translate(-50%, -50%);
-            background: black;
-            border-radius: 10px;
         }
-        .iphone .sensor{
-            content: '';
-            display: block;
+        .sensor{
             width: 7px;
             height: 7px;
-            position: absolute;
             top: -55px;
             left: 51%;
-            transform: translate(-50%, -50%);
-            background: black;
-            border-radius: 10px;
-        }
-        .iphone .button{
-            content: '';
-            display: block;
-            width: 50px;
-            height: 50px;
-            position: absolute;
-            left: 51%;
-            bottom: -92px;
-            transform: translate(-50%, -50%);
-            background: white;
-            border: 2px solid;
-            border-radius: 50%;
-            border-color: rgb(68, 58, 2);
-        }
-        .iphone .content{
+        }        
+        .screen{
             width: 360px;
             height: 640px;
             background-color: black;
+            border: 2px solid black;
         }
-        img{
+        .screenImg{
             width: 360px;
             height: 640px;
             object-fit: fill;
-            border: 2px solid black;
         }
-        .text{   
+        .unlock{   
             position: relative;         
             left: 33%;
             color: rgb(166, 166, 166);
@@ -169,62 +129,87 @@
         }
         .signal{
             position: absolute;         
-            left: 2%;
+            left: 10%;
             color: rgb(221, 218, 218);
             top: -11px;
             font-size:14px;
             font-weight: bold;
             font-family: 'Open Sans', sans-serif;
+        } 
+        
+        .topBar, .bottomBar{
+            content: '';
+            display: block;
+            width: 35px;
+            height: 6px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            background: rgb(166, 166, 166);
+            border-radius: 10px;
         }
         .topBar{
-            content: '';
-            display: block;
-            width: 35px;
-            height: 6px;
-            position: absolute;
             top: 10px;
             left: 51%;
-            transform: translate(-50%, -50%);
-            background: rgb(166, 166, 166);
-            border-radius: 10px;
         }
         .bottomBar{
-            content: '';
-            display: block;
-            width: 35px;
-            height: 6px;
-            position: absolute;
             bottom: 5px;
             left: 51%;
-            transform: translate(-50%, -50%);
-            background: rgb(166, 166, 166);
-            border-radius: 10px;
+        }
+        .cameraIcon{
+            position: absolute;
+            bottom: 1px;
+            left: 91%;
+            height: 27px;
+        }
+        .ellipses{
+            position: absolute;
+            top: -6px;
+            left: 1%;
+            height: 31px;           
+        }
+        .wifi{
+            position: absolute;
+            top: 0.4%;
+            left: 22.5%;
+            height: 17px;   
+        }
+        .battery{
+            position: absolute;
+            top: 0.2%;
+            left: 91%;
+            height: 22px;
+            width: 29px;  
         }
 
     </style>
 </head>
 
-<body>
+<body> 
+<div>
     <div class="iphone">
         <div class="frame"></div>
         <div class="sensor"></div>
         <div class="speaker"></div>
         <div class="camera"></div>
         <div class="button"></div>
-        <div class="sideButton"></div>
-        <div class="volumeButton1"></div>
-        <div class="volumeButton2"></div>
+        <div class="lockButton"></div>
+        <div class="volumeButtonTop"></div>
+        <div class="volumeButtonBottom"></div>
         <div class="muteButton"></div>
-        <div class="content">
-            <img src="https://images.unsplash.com/photo-1542061442958-8276a8c3c898?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80" alt="Starry Night">             
-            <p class="text">> slide to unlock</p>
+        <div class="screen">
+            <img class="screenImg" src="photo-1542061442958-8276a8c3c898.avif" alt="Starry Night">             
+            <p class="unlock">> slide to unlock</p>
             <p class="clock">05:18</p>  
             <p class="date">Wednesday, 24 september</p>  
-            <p class="signal">*****Signal</p>        
+            <p class="signal">Signal</p>
+            <img class="cameraIcon" src="icons8-compact-camera-50.png">
+            <img class="ellipses" src="icons8-ellipsis-50.png">
+            <img class="wifi" src="icons8-wi-fi-30.png">
+            <img class="battery" src="icons8-full-battery-30.png">  
         </div>
         <div class="topBar"></div>
         <div class="bottomBar"></div>
     </div>
-
+</div>
 
 </body>
