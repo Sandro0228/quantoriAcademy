@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>DVD Lockscreen</title>
+
+    <style>
+        
+        @keyframes hor-movement {
+           from {
+                margin-left: 0vh;
+            }
+           to {
+                margin-left: 19vh;
+            } 
+        }
+
+        @keyframes ver-movement {
+            from {
+                margin-top: 0vh;
+            }
+            to {
+                margin-top: 92vh;
+            }
+        }
+        
+        .image {
+            position: absolute;
+            height: 70px;
+            width: 160px;
+            animation-name: hor-movement, ver-movement;
+            animation-duration: 10s, 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <img class="image" src="image_(23).png">
+    </div>
+
+</body>
