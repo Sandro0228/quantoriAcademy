@@ -5,29 +5,27 @@
     <title>DVD Lockscreen</title>
 
     <style>
+        body{
+            background-color: black;
+        }
         
         @keyframes hor-movement {
-           from {
-                margin-left: 0vh;
-            }
-           to {
-                margin-left: 192vh;
-            } 
+            0% {margin-left: 0vh;}
+            100% {margin-left: 173vh;}
         }
 
         @keyframes ver-movement {
-            from {
-                margin-top: 0vh;
-            }
-            to {
-                margin-top: 92vh;
-            }
+            0% {margin-top: 0vh; background-color: yellow;}
+            25%{background-color: blue;}
+            50%{background-color: blueviolet;}
+            25%{background-color: red}
+            100%{margin-top: 83vh; background-color: orange}
         }
         
         .image {
             position: absolute;
-            height: 70px;
-            width: 160px;
+            height: 140px;
+            width: 320px;
             animation-name: hor-movement, ver-movement;
             animation-duration: 10s, 4s;
             animation-iteration-count: infinite;
@@ -41,6 +39,9 @@
 <body>
     <div>
         <img class="image" src="image_(23).png">
+        <audio>
+            <source src="laser.mp3">
+        </audio>
     </div>
 
 </body>
