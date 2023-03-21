@@ -54,18 +54,24 @@
 <body>
   <div>
     <img class="image" src="image_(23).png" />
+    <iframe
+      src="250-milliseconds-of-silence.mp3"
+      allow="autoplay"
+      id="audio"
+      style="display: none"
+    ></iframe>
+    <audio controls autoplay hidden id="myAudio">
+      <source src="laser.mp3" />
+      <script>
+        let audioControl = document.getElementById("myAudio");
+        audioControl.onended = function () {
+          this.currentTime = 0;
+          let delay = setTimeout(function () {
+            audioControl.play();
+            clearTimeout(delay);
+          }, 4200);
+        };
+      </script>
+    </audio>
   </div>
-  <audio id="myAudio" controls autoplay hidden>
-    <source src="laser.mp3" />
-    <script>
-      let audioControl = document.getElementById("myAudio");
-      audioControl.onended = function () {
-        this.currentTime = 0;
-        let delay = setTimeout(function () {
-          audioControl.play();
-          clearTimeout(delay);
-        }, 4200);
-      };
-    </script>
-  </audio>
 </body>
