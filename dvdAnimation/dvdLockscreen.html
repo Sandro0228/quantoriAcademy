@@ -1,47 +1,71 @@
 <!DOCTYPE html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>DVD Lockscreen</title>
+  <meta charset="UTF-8" />
+  <title>DVD Lockscreen</title>
 
-    <style>
-        body{
-            background-color: black;
-        }
-        
-        @keyframes hor-movement {
-            0% {margin-left: 0vh;}
-            100% {margin-left: 173vh;}
-        }
+  <style>
+    body {
+      background-color: black;
+    }
 
-        @keyframes ver-movement {
-            0% {margin-top: 0vh; background-color: yellow;}
-            25%{background-color: blue;}
-            50%{background-color: blueviolet;}
-            25%{background-color: red}
-            100%{margin-top: 83vh; background-color: orange}
-        }
-        
-        .image {
-            position: absolute;
-            height: 140px;
-            width: 320px;
-            animation-name: hor-movement, ver-movement;
-            animation-duration: 10s, 4s;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-            animation-timing-function: linear;
-        }
+    @keyframes hor-movement {
+      0% {
+        margin-left: 0vh;
+      }
+      100% {
+        margin-left: 165vh;
+      }
+    }
 
-    </style>
+    @keyframes ver-movement {
+      0% {
+        margin-top: 0vh;
+        background-color: yellow;
+      }
+      25% {
+        background-color: blue;
+      }
+      50% {
+        background-color: blueviolet;
+      }
+      25% {
+        background-color: red;
+      }
+      100% {
+        margin-top: 79vh;
+        background-color: orange;
+      }
+    }
+
+    .image {
+      position: absolute;
+      height: 140px;
+      width: 320px;
+      animation-name: hor-movement, ver-movement;
+      animation-duration: 8s, 4s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: linear;
+    }
+  </style>
 </head>
 
 <body>
-    <div>
-        <img class="image" src="image_(23).png">
-        <audio>
-            <source src="laser.mp3">
-        </audio>
-    </div>
-
+  <div>
+    <img class="image" src="image_(23).png" />
+  </div>
+  <audio id="myAudio" controls autoplay hidden>
+    <source src="laser.mp3" />
+    <script>
+      let audioControl = document.getElementById("myAudio");
+      audioControl.onended = function () {
+        this.currentTime = 0;
+        let delay = setTimeout(function () {
+          audioControl.play();
+          clearTimeout(delay);
+        }, 3200);
+      };
+    </script>
+  </audio>
 </body>
