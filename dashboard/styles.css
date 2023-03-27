@@ -1,0 +1,70 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #f2f4f7;
+  box-sizing: border-box;
+  font-family: "Inter";
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+.heading,
+.heading2 {
+  position: relative;
+  text-decoration: transparent;
+  top: 56.49px;
+  left: -15px;
+  color: #9d9fa1;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.heading2 {
+  top: 76px;
+}
+li {
+  position: relative;
+  top: 16px;
+  list-style: none;
+  color: #5f6980;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  padding: 12px;
+}
+
+#sidebar {
+  position: fixed;
+  width: 232px;
+  background: #ffff;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+#sidebar .brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 5.84px;
+  left: 25.01px;
+}
+
+.vector {
+  position: absolute;
+  right: 20.5px;
+}
+
+.logo {
+  position: relative;
+  right: 10.5px;
+}
