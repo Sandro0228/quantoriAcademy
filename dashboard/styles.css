@@ -64,7 +64,70 @@ li {
   right: 20.5px;
 }
 
-.logo {
+.icons {
   position: relative;
   right: 10.5px;
+}
+
+.bottomIcons {
+  position: absolute;
+  left: -20px;
+  bottom: 12px;
+  display: inline;
+  list-style-type: none;
+}
+.bottomIcons li {
+  float: left;
+  padding: auto;
+  margin: 10px;
+}
+
+#content {
+  position: relative;
+  width: calc(100%-232px);
+  left: 232px;
+}
+nav {
+  background: #ffff;
+}
+form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 16px;
+  gap: 8px;
+  height: 46px;
+  background: #ffffff;
+  border: 1px solid #eaecf0;
+  border-radius: 6px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+input {
+  width: 845px;
+  height: 22px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #9d9fa2;
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}
+.navIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px;
+  gap: 32px;
+  position: absolute;
+  width: 208px;
+  height: 40px;
+  right: 220px;
+  top: -25px;
 }
